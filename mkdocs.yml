@@ -1,0 +1,58 @@
+site_name: CS for Backend Developer
+site_url: https://CokaNuri.github.io/CSBE/
+docs_dir: .
+exclude_docs: |
+  .git/
+  .omc/
+  .github/
+  mkdocs.yml
+  requirements.txt
+
+theme:
+  name: material
+  language: ko
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - toc.permalink
+
+nav:
+  - Home: README.md
+  - 소프트웨어 공학:
+    - Chapter 1:
+      - 소프트웨어 공학 개요: "software-engineering/Chapter 1/01 소프트웨어 공학 개요.md"
+    - Chapter 2:
+      - 소프트웨어 품질: "software-engineering/Chapter 2/01 소프트웨어 품질.md"
+      - 인공지능 소프트웨어 품질: "software-engineering/Chapter 2/02 인공지능 소프트웨어 품질.md"
+      - 소프트웨어 품질 모델 및 표준: "software-engineering/Chapter 2/03 소프트웨어 품질 모델 및 표준.md"
+
+plugins:
+  - search:
+      lang: ko
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
