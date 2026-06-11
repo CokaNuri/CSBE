@@ -1,12 +1,6 @@
 site_name: CS for Backend Developer
 site_url: https://CokaNuri.github.io/CSBE/
-docs_dir: .
-exclude_docs: |
-  .git/
-  .omc/
-  .github/
-  mkdocs.yml
-  requirements.txt
+docs_dir: docs
 
 theme:
   name: material
@@ -34,7 +28,7 @@ theme:
     - toc.permalink
 
 nav:
-  - Home: README.md
+  - Home: index.md
   - 소프트웨어 공학:
     - Chapter 1:
       - 소프트웨어 공학 개요: "software-engineering/Chapter 1/01 소프트웨어 공학 개요.md"
