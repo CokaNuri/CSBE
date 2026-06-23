@@ -36,6 +36,11 @@ nav:
       - 소프트웨어 품질: "software-engineering/Chapter 2/01 소프트웨어 품질.md"
       - 인공지능 소프트웨어 품질: "software-engineering/Chapter 2/02 인공지능 소프트웨어 품질.md"
       - 소프트웨어 품질 모델 및 표준: "software-engineering/Chapter 2/03 소프트웨어 품질 모델 및 표준.md"
+    - Chapter 3:
+      - 실현 가능성 분석: "software-engineering/Chapter 3/01 실현 가능성 분석.md"
+      - 전통적인 소프트웨어 프로세스: "software-engineering/Chapter 3/02 전통적인 소프트웨어 프로세스.md"
+      - 애자일 및 XP 프로세스: "software-engineering/Chapter 3/03 애자일 및 XP 프로세스.md"
+      - 소프트웨어 프로세스 개선: "software-engineering/Chapter 3/04 소프트웨어 프로세스 개선.md"
 
 plugins:
   - search:
