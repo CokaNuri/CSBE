@@ -41,6 +41,10 @@ nav:
       - 전통적인 소프트웨어 프로세스: "software-engineering/Chapter 3/02 전통적인 소프트웨어 프로세스.md"
       - 애자일 및 XP 프로세스: "software-engineering/Chapter 3/03 애자일 및 XP 프로세스.md"
       - 소프트웨어 프로세스 개선: "software-engineering/Chapter 3/04 소프트웨어 프로세스 개선.md"
+    - Chapter 4:
+      - DevOps 개요: "software-engineering/Chapter 4/01 DevOps 개요.md"
+      - DevOps 프로세스와 프랙티스: "software-engineering/Chapter 4/02 DevOps 프로세스와 프랙티스.md"
+      - DevOps 변형들: "software-engineering/Chapter 4/03 DevOps 변형들.md"
 
 plugins:
   - search:
