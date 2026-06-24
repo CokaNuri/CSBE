@@ -45,6 +45,12 @@ nav:
       - DevOps 개요: "software-engineering/Chapter 4/01 DevOps 개요.md"
       - DevOps 프로세스와 프랙티스: "software-engineering/Chapter 4/02 DevOps 프로세스와 프랙티스.md"
       - DevOps 변형들: "software-engineering/Chapter 4/03 DevOps 변형들.md"
+    - Chapter 5:
+      - 프로젝트 관리 필요성: "software-engineering/Chapter 5/01 프로젝트 관리 필요성.md"
+      - 프로젝트 관리 기법: "software-engineering/Chapter 5/02 프로젝트 관리 기법.md"
+      - 프로젝트 조직: "software-engineering/Chapter 5/03 프로젝트 조직.md"
+      - 프로젝트 관리 계획서: "software-engineering/Chapter 5/04 프로젝트 관리 계획서.md"
+      - 프로젝트 지원 도구: "software-engineering/Chapter 5/05 프로젝트 지원 도구.md"
 
 plugins:
   - search:
