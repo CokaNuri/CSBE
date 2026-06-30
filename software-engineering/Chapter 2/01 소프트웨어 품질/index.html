@@ -1,0 +1,1770 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CokaNuri.github.io/CSBE/software-engineering/Chapter%202/01%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%ED%92%88%EC%A7%88/">
+      
+      
+        <link rel="prev" href="../../Chapter%201/01%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B3%B5%ED%95%99%20%EA%B0%9C%EC%9A%94/">
+      
+      
+        <link rel="next" href="../02%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%ED%92%88%EC%A7%88/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>소프트웨어 품질 - CS for Backend Developer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../../.." title="CS for Backend Developer" class="md-header__button md-logo" aria-label="CS for Backend Developer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS for Backend Developer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              소프트웨어 품질
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Chapter%201/01%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B3%B5%ED%95%99%20%EA%B0%9C%EC%9A%94/" class="md-tabs__link">
+          
+  
+  
+  소프트웨어 공학
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CS for Backend Developer" class="md-nav__button md-logo" aria-label="CS for Backend Developer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CS for Backend Developer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소프트웨어 공학
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    소프트웨어 공학
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%201/01%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B3%B5%ED%95%99%20%EA%B0%9C%EC%9A%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소프트웨어 공학 개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소프트웨어 품질
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소프트웨어 품질
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        소프트웨어 품질을 향상한다는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        소프트웨어 품질이 중요한 이유 - 다양한 기대를 충족시켜야 한다
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%ED%92%88%EC%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    인공지능 소프트웨어 품질
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%ED%92%88%EC%A7%88%20%EB%AA%A8%EB%8D%B8%20%EB%B0%8F%20%ED%91%9C%EC%A4%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소프트웨어 품질 모델 및 표준
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%203/01%20%EC%8B%A4%ED%98%84%20%EA%B0%80%EB%8A%A5%EC%84%B1%20%EB%B6%84%EC%84%9D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실현 가능성 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%203/02%20%EC%A0%84%ED%86%B5%EC%A0%81%EC%9D%B8%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    전통적인 소프트웨어 프로세스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%203/03%20%EC%95%A0%EC%9E%90%EC%9D%BC%20%EB%B0%8F%20XP%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    애자일 및 XP 프로세스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%203/04%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EA%B0%9C%EC%84%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소프트웨어 프로세스 개선
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%204/01%20DevOps%20%EA%B0%9C%EC%9A%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps 개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%204/02%20DevOps%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80%20%ED%94%84%EB%9E%99%ED%8B%B0%EC%8A%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps 프로세스와 프랙티스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%204/03%20DevOps%20%EB%B3%80%ED%98%95%EB%93%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps 변형들
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%205/01%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC%20%ED%95%84%EC%9A%94%EC%84%B1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 관리 필요성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%205/02%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC%20%EA%B8%B0%EB%B2%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 관리 기법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%205/03%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%A1%B0%EC%A7%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 조직
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%205/04%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC%20%EA%B3%84%ED%9A%8D%EC%84%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 관리 계획서
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chapter%205/05%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%A7%80%EC%9B%90%20%EB%8F%84%EA%B5%AC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 지원 도구
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        소프트웨어 품질을 향상한다는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        소프트웨어 품질이 중요한 이유 - 다양한 기대를 충족시켜야 한다
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="01">01 소프트웨어 품질의 중요성<a class="headerlink" href="#01" title="Permanent link">&para;</a></h1>
+<h2 id="_1">소프트웨어 품질을 향상한다는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>사용자, 개발자, 유지보수자, 마케팅 관리자 등
+<br><strong>소프트웨어 개발 관련자 모두의 요구사항과 기대치를 만족</strong>시키는 것</p>
+</blockquote>
+<h2 id="-">소프트웨어 품질이 중요한 이유 - 다양한 기대를 충족시켜야 한다<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<ul>
+<li>소프트웨어 품질 요소가 굉장히 많다</li>
+<li>여러 관점에서 품질이 고려되어야 한다</li>
+<li>다양한 품질 요소를 모두 만족시키는 것은 어렵다</li>
+<li>소프트웨어의 특성을 고려한 적절한 품질 목표를 설정하는 게 중요</li>
+</ul>
+<p><br></p>
+<h1 id="02">02 소프트웨어 품질 요소<a class="headerlink" href="#02" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>역할</th>
+<th>기대치</th>
+<th>대응 품질 요소</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스폰서</td>
+<td>적은 비용</td>
+<td>낮은 비용, 재사용성</td>
+</tr>
+<tr>
+<td>사용자</td>
+<td>정확히 동작, 사용하기 쉬움, 고장 X</td>
+<td>정확성, 신뢰성, 사용성</td>
+</tr>
+<tr>
+<td>유지보수자</td>
+<td>코드 가독성, 테스트 쉬움</td>
+<td>가독성, 검증 가능성</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>스테이크홀더마다 관심 있는 품질이 다르다.</p>
+</blockquote>
+<details>
+<summary>다양한 관계자의 기대에 따라 trade-off를 고려해야 하는 실제 사례는?</summary>
+
+- 적시성 vs 견고성 (빨리 출시 vs 버그 없이 )
+- 보안성 vs 사용성 (인증 강화 vs 편리함)
+- 가독성 vs 효율성 (읽기 쉬운 코드 vs 최적화)
+
+</details>
+
+<details>
+<summary>많은 품질 중에서도 가장 중요한 품질은?</summary>
+
+정확성이 기본 토대. 명세대로 동작조차 안 하면 다른 품질은 의미가 없다.
+그 위에서 서비스 상황에 따라 우선순위를 둔다 (금융=보안·무결성,
+게임=성능·사용성, 의료·항공=안전성).
+
+</details>
+
+<p><br></p>
+<h2 id="-_1">외적 품질 요소 - 사용자가 체감하는 품질<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정확성</td>
+<td>명세된 요구사항대로 정확히 동작하는 능력</td>
+</tr>
+<tr>
+<td>신뢰성</td>
+<td>주어진 조건에서 일정 기간 고장 없이 기능을 수행</td>
+</tr>
+<tr>
+<td>견고성</td>
+<td>잘못된 입력 등 <strong>명세 밖</strong> 비정상 상황에서도 적절히 대응</td>
+</tr>
+<tr>
+<td>성능</td>
+<td>빠른 응답·높은 처리량·적은 자원으로 효율적 처리</td>
+</tr>
+<tr>
+<td>사용자 친숙성</td>
+<td>배우고 사용하기 쉬운 정도</td>
+</tr>
+<tr>
+<td>가용성</td>
+<td>원하는 시점에 시스템을 쓸 수 있는 비율</td>
+</tr>
+<tr>
+<td>보안성</td>
+<td>비인가 접근·공격으로부터 시스템·데이터 보호</td>
+</tr>
+<tr>
+<td>안전성</td>
+<td>오작동이 사람·환경·재산에 해를 끼치지 않도록 보장</td>
+</tr>
+<tr>
+<td>무결성</td>
+<td>데이터·프로그램이 비인가로 변경·훼손되지 않도록 보호</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>견고성을 위해 명세에 없는 조건에도 대응하려면 어떻게 해야 할까?</summary>
+
+- 방어적 프로그래밍(외부 입력을 신뢰하지 않는 것을 전제로 코드를 짜는 방식)
+- fail-safe (고장 나도 안전한 상태로)
+- fuzzing (이상한 입력을 던져 약점 찾기)
+
+</details>
+
+<details>
+<summary>사용자 친숙성 같은 품질은 어떻게 정량화하는가?</summary>
+
+작업 성공률, 작업 완료 시간, 오류 발생 횟수,
+사용자 만족도 설문
+ex) 회원가입 성공률 95%, 평균 소요시간 40초
+
+</details>
+
+<details>
+<summary>성능은 구체적으로 어떤 지표를 보는가?</summary>
+
+- 응답 시간: 평균 응답 속도, p95·p99
+- 처리량: TPS
+- 자원 사용량: CPU·메모리·네트워크·디스크 사용량
+- 확장성: 부하가 늘어도 유지되는가
+
+</details>
+
+<details>
+<summary>안정성과 신뢰성은 뭐가 다른가?</summary>
+
+- 안정성: 고장이 발생해도 안전한가
+- 신뢰성: 얼마나 자주 고장이 발생하는가
+- 자주 고장 나도 안전할 수도 있고 자주 고장 안나도 그 고장이 치명적일 수 있다
+
+</details>
+
+<details>
+<summary>보안성 - 소프트웨어에 취약점이 얼마나 있는지 어떻게 확인하나?</summary>
+
+정적 분석, 동적 분석, fuzzing, CVE 대조 등 여러 기법으로 추정
+
+</details>
+
+<details>
+<summary>안전성을 어떻게 정의·평가하나?</summary>
+
+오작동이 사람·환경·재산에 위해를 끼치지 않음 고장이 나도 위험한 결과로 이어지지 않으면 안전.
+지표·기법: 위험원 분석, FMEA, FTA
+
+</details>
+
+<details>
+<summary>FMEA vs FTA</summary>
+
+- FMEA: bottom-up. 각 요소가 고장 나면 어떤 영향을 미치는지 분석
+- FTA: top-down. 사고가 일어나려면 어떤 원인들이 모여야 하는지 거꾸로 추적
+
+</details>
+
+<details>
+<summary>무결성을 보안성과 따로 두는 이유는?</summary>
+
+보안의 3요소 = 기밀성·무결성·가용성 (CIA). 무결성은 원래 보안의 한 축인데, 데이터가 비인가로 변경·훼손되지 않음을 강조하려고 따로 뗀 것.
+
+</details>
+
+<p><br></p>
+<h2 id="-_2">내적 품질 요소 - 개발자가 보는 품질<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>검증 가능성</td>
+<td>테스트·검증을 쉽게 할 수 있는 정도</td>
+</tr>
+<tr>
+<td>유지보수성</td>
+<td>결함 수정·기능 변경을 쉽게 할 수 있는 정도</td>
+</tr>
+<tr>
+<td>이식성</td>
+<td>다른 하드웨어·SW 환경으로 옮기기 쉬운 정도</td>
+</tr>
+<tr>
+<td>가독성</td>
+<td>코드·문서를 이해하기 쉬운 정도</td>
+</tr>
+<tr>
+<td>생산성</td>
+<td>일정 자원으로 산출물을 만들어내는 효율</td>
+</tr>
+<tr>
+<td>상호 운영성</td>
+<td>다른 시스템과 정보를 교환하며 함께 동작</td>
+</tr>
+<tr>
+<td>적시성</td>
+<td>요구되는 시점에 맞춰 출시</td>
+</tr>
+<tr>
+<td>가시성</td>
+<td>개발 진행 상황·상태를 외부에서 파악 가능한 정도</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>검증 가능성 - 정형 검증이란?</summary>
+
+프로그램이 명세를 만족함을 수학적으로 증명하는 기법. 정형 검증은 모든 경우 증명. 강력하지만 비용이 커서 항공·우주·의료·원자력 등 critical 시스템에 주로 사용
+
+</details>
+
+<details>
+<summary>유지보수성 - 유지보수 비용이 왜 신규 개발보다 큰가?</summary>
+
+- 소프트웨어는 수명이 길다(개발은 한 번, 운영은 수년~수십 년)
+- 기존 코드를 이해하는 비용이 크다 → 가독성이 중요한 이유
+- 변경의 파급효과
+- 보통 전체 비용의 60~80%가 유지보수. 과거 데이터·코드 규모로 예측하지만 정확히는 어렵다
+
+</details>
+
+</details>
+<details>
+<summary>가독성 - 자바 코딩 가이드라인엔 뭐가 있고 실제로 다 지키나?</summary>
+
+Google Java Style Guide가 유명. 사람이 일일이 지키기보다 Checkstyle 같은 도구가 자동 검사(CI에 걸면 위반 시 빌드 실패로 강제됨).
+
+</details>
+
+<details>
+<summary>재사용성이 좋은지 어떻게 판단하나?</summary>
+
+외부 의존성이 적고, 인터페이스가 명확하며, 응집도 높고 결합도 낮을수록 재사용성이 좋다.
+
+</details>
+
+<details>
+<summary>개발 스케줄을 어떻게 면밀히 계획하나?</summary>
+
+작업을 잘게 쪼개 추정하고, 지연을 흡수할 버퍼(여유 시간)를 둔다. 처음부터 완벽한 계획보다 반복하며 보정하는 방식
+
+</details>
+
+<p><br></p>
+<h2 id="_2">프로세스 품질<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>좋은 제품은 좋은 개발 과정에서 나온다는 관점 <br>
+제품이 아니라, 그것을 <strong>만드는 과정</strong>의 품질을 본다</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>프로세스 모델 적합성</td>
+<td>프로젝트 특성에 맞는 개발 프로세스 모델(폭포수·애자일 등)을 골랐는가</td>
+</tr>
+<tr>
+<td>개발 방법론 적합성</td>
+<td>구조적 방법론, 객체지향 방법론 등</td>
+</tr>
+<tr>
+<td>도구 적합성</td>
+<td>형상관리·이슈추적·CI/CD 등 적절한 개발 도구를 갖추고 활용하는가</td>
+</tr>
+<tr>
+<td>표준 준수성</td>
+<td>코딩 규칙·문서 양식 등 정해진 표준을 따르는가</td>
+</tr>
+<tr>
+<td>프로젝트 데이터 관리 수준</td>
+<td>프로젝트 산출물과 이력을 잘 기록·관리하는가</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="cohesion">응집도 (Cohesion)<a class="headerlink" href="#cohesion" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>한 모듈이 한 가지 일에 얼마나 집중하는가. <strong>높을수록 좋다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>등급</th>
+<th>종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최상 (강함)</td>
+<td>기능적 응집</td>
+<td>모듈이 단 하나의 잘 정의된 기능만 수행</td>
+</tr>
+<tr>
+<td></td>
+<td>순차적 응집</td>
+<td>한 요소의 출력이 다음 요소의 입력이 됨</td>
+</tr>
+<tr>
+<td></td>
+<td>교환적(통신적) 응집</td>
+<td>같은 데이터를 사용하는 요소끼리 묶임</td>
+</tr>
+<tr>
+<td></td>
+<td>절차적 응집</td>
+<td>정해진 순서로 실행되는 요소들을 묶음</td>
+</tr>
+<tr>
+<td></td>
+<td>시간적 응집</td>
+<td>같은 시간대에 실행되어 묶임 (예: 초기화)</td>
+</tr>
+<tr>
+<td></td>
+<td>논리적 응집</td>
+<td>비슷한 종류의 일을 묶음 (플래그로 분기)</td>
+</tr>
+<tr>
+<td>최악 (약함)</td>
+<td>우연적 응집</td>
+<td>아무 관련 없는 것들이 우연히 묶임</td>
+</tr>
+</tbody>
+</table>
+<h2 id="coupling">결합도 (Coupling)<a class="headerlink" href="#coupling" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>모듈 간 의존이 얼마나 강한가. <strong>낮을수록 좋다.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>등급</th>
+<th>종류</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최상 (약함)</td>
+<td>데이터 결합</td>
+<td>필요한 데이터만 매개변수로 주고받음</td>
+</tr>
+<tr>
+<td></td>
+<td>스탬프 결합</td>
+<td>자료구조 전체를 넘기고 일부만 사용</td>
+</tr>
+<tr>
+<td></td>
+<td>제어 결합</td>
+<td>제어 플래그를 넘겨 다른 모듈 동작을 좌우</td>
+</tr>
+<tr>
+<td></td>
+<td>외부 결합</td>
+<td>외부에서 정한 데이터 형식·프로토콜에 의존</td>
+</tr>
+<tr>
+<td></td>
+<td>공통 결합</td>
+<td>전역 데이터를 여러 모듈이 공유</td>
+</tr>
+<tr>
+<td>최악 (강함)</td>
+<td>내용 결합</td>
+<td>다른 모듈 내부를 직접 참조·수정</td>
+</tr>
+</tbody>
+</table>
+<p><strong>응집도 ↑, 결합도 ↓ 가 좋은 설계</strong></p>
+<details>
+<summary>응집도·결합도 등급을 실제 코드에서 어떻게 판별하나?</summary>
+
+</details>
+
+<h2 id="_3">🔑 최종 정리<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>소프트웨어 품질은 결국 <strong>다양한 관계자(사용자·개발자·유지보수자 등)의 기대를 만족시키는 것</strong>이다.</p>
+<ul>
+<li><strong>외적 품질</strong> : 의도한 대로 정확하고 안전하고 빠르게 잘 동작하는가?</li>
+<li><strong>내적 품질</strong> : 검증하고 유지보수하기 쉬운가?</li>
+<li>
+<p>응집도↑·결합도↓가 핵심 기준</p>
+</li>
+<li>
+<p><strong>프로세스 품질</strong>: 제품 자체보다 그것을 <strong>만드는 과정</strong>이 좋은가?</p>
+</li>
+<li>좋은 과정에서 좋은 제품이 반복적으로 나온다는 관점</li>
+</ul>
+<blockquote>
+<p>한 줄 요약: 품질은 한 가지가 아니라 <strong>여러 관점의 기대</strong>이며, 서로 trade-off가 있어
+모두 최고로 만들 순 없다. 그래서 <strong>서비스 특성에 맞게 우선순위를 정하는 것</strong>이 핵심이다.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "toc.permalink"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
