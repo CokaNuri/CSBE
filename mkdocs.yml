@@ -51,6 +51,10 @@ nav:
       - 프로젝트 조직: "software-engineering/Chapter 5/03 프로젝트 조직.md"
       - 프로젝트 관리 계획서: "software-engineering/Chapter 5/04 프로젝트 관리 계획서.md"
       - 프로젝트 지원 도구: "software-engineering/Chapter 5/05 프로젝트 지원 도구.md"
+    - Chapter 7:
+      - 요구사항 개요 : "software-engineering/Chapter 7/01 요구사항 개요.md"
+      - 요구사항 수집 기법 : "software-engineering/Chapter 7/02 요구사항 수집 기법.md"
+      - 요구사항 정의서 작성 : "software-engineering/Chapter 7/03 요구사항 정의서 작성.md"
 
 plugins:
   - search:
