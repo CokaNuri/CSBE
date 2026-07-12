@@ -55,6 +55,12 @@ nav:
       - 요구사항 개요 : "software-engineering/Chapter 7/01 요구사항 개요.md"
       - 요구사항 수집 기법 : "software-engineering/Chapter 7/02 요구사항 수집 기법.md"
       - 요구사항 정의서 작성 : "software-engineering/Chapter 7/03 요구사항 정의서 작성.md"
+    - Chapter 8:
+      - 객체지향과 UML : "software-engineering/Chapter 8/01 객체지향과 UML.md"
+      - 기능 모델링 : "software-engineering/Chapter 8/02 기능 모델링.md"
+      - 구조 모델링 : "software-engineering/Chapter 8/03 구조 모델링.md"
+      - 행위 모델링 : "software-engineering/Chapter 8/04 행위 모델링.md"
+      - 분석 산출물 점검 : "software-engineering/Chapter 8/05 분석 산출물 점검.md"
 
 plugins:
   - search:
