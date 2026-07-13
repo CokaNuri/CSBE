@@ -61,6 +61,11 @@ nav:
       - 구조 모델링 : "software-engineering/Chapter 8/03 구조 모델링.md"
       - 행위 모델링 : "software-engineering/Chapter 8/04 행위 모델링.md"
       - 분석 산출물 점검 : "software-engineering/Chapter 8/05 분석 산출물 점검.md"
+    - Chapter 9:
+      - 모듈화 설계 개요 : "software-engineering/Chapter 9/01 분석 산출물 점검.md"
+      - 결합력의 이해 : "software-engineering/Chapter 9/02 결합력의 이해.md"
+      - 응집력의 이해 : "software-engineering/Chapter 9/03 응집력의 이해.md"
+      - 모듈화 응용 기술 : "software-engineering/Chapter 9/04 모듈화 응용 기술.md"
 
 plugins:
   - search:
