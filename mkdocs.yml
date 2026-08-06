@@ -74,9 +74,7 @@ nav:
     - Chapter 11:
       - 설계 원리 : "software-engineering/Chapter 11/01 설계 원리.md"
       - 패키지 다이어그램 : "software-engineering/Chapter 11/02 패키지 다이어그램.md"
-      - 자료 구조 설계 : "software-engineering/Chapter 11/03 자료 구조 설계.md"
-      - 사용자 인터페이스 설계 : "software-engineering/Chapter 11/04 사용자 인터페이스 설계.md"
-      - 물리 구조 설계 : "software-engineering/Chapter 11/05 물리 구조 설계.md"
+      - 설계 : "software-engineering/Chapter 11/03 설계.md"
     - Chapter 13:
       - 프로그래밍 언어 유형 : "software-engineering/Chapter 13/01 프로그래밍 언어 유형.md"
       - 좋은 코딩 기법 : "software-engineering/Chapter 13/02 좋은 코딩 기법.md"
