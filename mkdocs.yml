@@ -66,6 +66,22 @@ nav:
       - 결합력의 이해 : "software-engineering/Chapter 9/02 결합력의 이해.md"
       - 응집력의 이해 : "software-engineering/Chapter 9/03 응집력의 이해.md"
       - 모듈화 응용 기술 : "software-engineering/Chapter 9/04 모듈화 응용 기술.md"
+    - Chapter 10:
+      - 설계 패턴 개요 : "software-engineering/Chapter 10/01 설계 패턴 개요.md"
+      - 생성 패턴 : "software-engineering/Chapter 10/02 생성 패턴.md"
+      - 구조 패턴 : "software-engineering/Chapter 10/03 구조 패턴.md"
+      - 행위 패턴 : "software-engineering/Chapter 10/04 행위 패턴.md"
+    - Chapter 11:
+      - 설계 원리 : "software-engineering/Chapter 11/01 설계 원리.md"
+      - 패키지 다이어그램 : "software-engineering/Chapter 11/02 패키지 다이어그램.md"
+      - 자료 구조 설계 : "software-engineering/Chapter 11/03 자료 구조 설계.md"
+      - 사용자 인터페이스 설계 : "software-engineering/Chapter 11/04 사용자 인터페이스 설계.md"
+      - 물리 구조 설계 : "software-engineering/Chapter 11/05 물리 구조 설계.md"
+    - Chapter 13:
+      - 프로그래밍 언어 유형 : "software-engineering/Chapter 13/01 프로그래밍 언어 유형.md"
+      - 좋은 코딩 기법 : "software-engineering/Chapter 13/02 좋은 코딩 기법.md"
+      - 코딩 가이드라인 : "software-engineering/Chapter 13/03 코딩 가이드라인.md"
+      - 오픈 소스 기반 개발 : "software-engineering/Chapter 13/04 오픈 소스 기반 개발.md"
 
 plugins:
   - search:
