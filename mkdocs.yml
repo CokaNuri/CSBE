@@ -80,6 +80,21 @@ nav:
       - 좋은 코딩 기법 : "software-engineering/Chapter 13/02 좋은 코딩 기법.md"
       - 코딩 가이드라인 : "software-engineering/Chapter 13/03 코딩 가이드라인.md"
       - 오픈 소스 기반 개발 : "software-engineering/Chapter 13/04 오픈 소스 기반 개발.md"
+    - Chapter 14:
+      - 테스트 개요 : "software-engineering/Chapter 14/01 테스트 개요.md"
+      - 코드 기반 테스트 케이스 생성 기법 : "software-engineering/Chapter 14/02 코드 기반 테스트 케이스 생성 기법.md"
+      - 오류 기반 테스트 : "software-engineering/Chapter 14/03 오류 기반 테스트.md"
+      - 동적 심볼릭 테스트 : "software-engineering/Chapter 14/04 동적 심볼릭 테스트.md"
+    - Chapter 15:
+      - 블랙박스 테스트 개요 : "software-engineering/Chapter 15/01 블랙박스 테스트 개요.md"
+      - 기능 기반 테스트 케이스 생성 기법 : "software-engineering/Chapter 15/02 기능 기반 테스트 케이스 생성 기법.md"
+      - 시나리오 기반 테스트 : "software-engineering/Chapter 15/03 시나리오 기반 테스트.md"
+      - 테스트 단계 : "software-engineering/Chapter 15/04 테스트 단계.md"
+    - Chapter 16:
+      - 형상 관리 : "software-engineering/Chapter 16/01 형상 관리.md"
+      - 코드 리팩토링 : "software-engineering/Chapter 16/02 코드 리팩토링.md"
+      - 관점지향 프로그래밍 : "software-engineering/Chapter 16/03 관점지향 프로그래밍.md"
+      - 탐색기반 소프트웨어 공학 : "software-engineering/Chapter 16/04 탐색기반 소프트웨어 공학.md"
 
 plugins:
   - search:
