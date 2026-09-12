@@ -95,6 +95,24 @@ nav:
       - 코드 리팩토링 : "software-engineering/Chapter 16/02 코드 리팩토링.md"
       - 관점지향 프로그래밍 : "software-engineering/Chapter 16/03 관점지향 프로그래밍.md"
       - 탐색기반 소프트웨어 공학 : "software-engineering/Chapter 16/04 탐색기반 소프트웨어 공학.md"
+  - 운영체제:
+    - Chapter 2:
+      - 컴퓨터의 기본 구성 : "operating-system/Chapter 2 - 컴퓨터 구조/01 컴퓨터의 기본 구성.md"
+      - CPU와 메모리 : "operating-system/Chapter 2 - 컴퓨터 구조/02 CPU와 메모리.md"
+      - 컴퓨터 성능 향상 기술 : "operating-system/Chapter 2 - 컴퓨터 구조/03 컴퓨터 성능 향상 기술.md"
+      - 멀티 프로세싱 : "operating-system/Chapter 2 - 컴퓨터 구조/04 멀티 프로세싱.md"
+    - Chapter 3:
+      - 프로세스의 개요 : "operating-system/Chapter 3 - 프로세스와 쓰레드/01 프로세스의 개요.md"
+      - 프로세스 제어 블록과 문맥 교환 : "operating-system/Chapter 3 - 프로세스와 쓰레드/02 프로세스 제어 블록과 문맥 교환.md"
+      - 프로세스의 연산 : "operating-system/Chapter 3 - 프로세스와 쓰레드/03 프로세스의 연산.md"
+      - 스레드 : "operating-system/Chapter 3 - 프로세스와 쓰레드/04 스레드.md"
+      - 동적 할당 영역과 시스템 호출 : "operating-system/Chapter 3 - 프로세스와 쓰레드/05 동적 할당 영역과 시스템 호출.md"
+    - Chapter 4:
+      - 스케줄링의 개요 : "operating-system/Chapter 4 - CPU 스케줄링/01 스케줄링의 개요.md"
+      - 스케줄링 시 고려 사항 : "operating-system/Chapter 4 - CPU 스케줄링/02 스케줄링 시 고려 사항.md"
+      - 다중 큐 : "operating-system/Chapter 4 - CPU 스케줄링/03 다중 큐.md"
+      - 스케줄링 알고리즘 : "operating-system/Chapter 4 - CPU 스케줄링/04 스케줄링 알고리즘.md"
+      - 인터럽트 처리 : "operating-system/Chapter 4 - CPU 스케줄링/05 인터럽트 처리.md"
 
 plugins:
   - search:
