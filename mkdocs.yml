@@ -113,6 +113,19 @@ nav:
       - 다중 큐 : "operating-system/Chapter 4 - CPU 스케줄링/03 다중 큐.md"
       - 스케줄링 알고리즘 : "operating-system/Chapter 4 - CPU 스케줄링/04 스케줄링 알고리즘.md"
       - 인터럽트 처리 : "operating-system/Chapter 4 - CPU 스케줄링/05 인터럽트 처리.md"
+    - Chapter 5:
+      - 프로세스 간 통신 : "operating-system/Chapter 5 - 프로세스 동기화/01 프로세스 간 통신.md"
+      - 공유 자원과 임계구역 : "operating-system/Chapter 5 - 프로세스 동기화/02 공유 자원과 임계구역.md"
+      - 임계구역 문제 해결 방법 : "operating-system/Chapter 5 - 프로세스 동기화/03 임계구역 문제 해결 방법.md"
+      - 파일·파이프·소켓 프로그래밍 : "operating-system/Chapter 5 - 프로세스 동기화/04 파일·파이프·소켓 프로그래밍.md"
+    - Chapter 6:
+      - 교착 상태의 개요 : "operating-system/Chapter 6 - 교착 상태/01 교착 상태의 개요.md"
+      - 교착 상태 필요조건 : "operating-system/Chapter 6 - 교착 상태/02 교착 상태 필요조건.md"
+      - 교착 상태 해결 방법 : "operating-system/Chapter 6 - 교착 상태/03 교착 상태 해결 방법.md"
+    - Chapter 7:
+      - 메모리 관리의 개요 : "operating-system/Chapter 7 - 물리 메모리 관리/01 메모리 관리의 개요.md"
+      - 메모리 주소 : "operating-system/Chapter 7 - 물리 메모리 관리/02 메모리 주소.md"
+      - 단일 프로그래밍 환경의 메모리 할당 : "operating-system/Chapter 7 - 물리 메모리 관리/03 단일 프로그래밍 환경의 메모리 할당.md"
 
 plugins:
   - search:
