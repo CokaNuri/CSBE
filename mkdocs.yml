@@ -142,7 +142,6 @@ nav:
       - 저장장치 : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/02 저장장치.md"
       - 디스크 스케줄링 : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/03 디스크 스케줄링.md"
       - RAID : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/04 RAID.md"
-      - 하드웨어의 규격과 발전 : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/05 하드웨어의 규격과 발전.md"
 
 plugins:
   - search:
