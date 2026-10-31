@@ -142,6 +142,14 @@ nav:
       - 저장장치 : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/02 저장장치.md"
       - 디스크 스케줄링 : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/03 디스크 스케줄링.md"
       - RAID : "operating-system/Chapter 10 - 입출력 시스템과 저장장치/04 RAID.md"
+    - Chapter 11:
+      - 파일과 파일 시스템 : "operating-system/Chapter 11 - 파일 시스템/01 파일과 파일 시스템.md"
+      - 디렉터리의 구조 : "operating-system/Chapter 11 - 파일 시스템/02 디렉터리의 구조.md"
+      - 디스크 파일 할당 : "operating-system/Chapter 11 - 파일 시스템/03 디스크 파일 할당.md"
+      - 유닉스 파일의 특징 : "operating-system/Chapter 11 - 파일 시스템/04 유닉스 파일의 특징.md"
+    - Chapter 12:
+      - 네트워크와 인터넷 : "operating-system/Chapter 12 - 네트워크와 분산 시스템/01 네트워크와 인터넷.md"
+      - 분산 시스템 : "operating-system/Chapter 12 - 네트워크와 분산 시스템/02 분산 시스템.md"
 
 plugins:
   - search:
