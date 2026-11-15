@@ -150,6 +150,34 @@ nav:
     - Chapter 12:
       - 네트워크와 인터넷 : "operating-system/Chapter 12 - 네트워크와 분산 시스템/01 네트워크와 인터넷.md"
       - 분산 시스템 : "operating-system/Chapter 12 - 네트워크와 분산 시스템/02 분산 시스템.md"
+  - 가상화와 컨테이너:
+    - Chapter 1:
+      - 가상화 : "virtualization-container/Chapter 1 - 가상화 기초 지식/01 가상화.md"
+      - 가상화의 종류 : "virtualization-container/Chapter 1 - 가상화 기초 지식/02 가상화의 종류.md"
+      - 가상화의 장단점 : "virtualization-container/Chapter 1 - 가상화 기초 지식/03 가상화의 장단점.md"
+      - 가상화와 클라우드 : "virtualization-container/Chapter 1 - 가상화 기초 지식/04 가상화와 클라우드.md"
+      - 클라우드 보안 : "virtualization-container/Chapter 1 - 가상화 기초 지식/05 클라우드 보안.md"
+    - Chapter 2:
+      - 서버 가상화의 원리 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/01 서버 가상화의 원리.md"
+      - 호스트 OS형 가상화 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/02 호스트 OS형 가상화.md"
+      - 하이퍼바이저형 가상화 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/03 하이퍼바이저형 가상화.md"
+      - 컨테이너형 가상화 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/04 컨테이너형 가상화.md"
+      - 클라우드의 서버 가상화 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/05 클라우드의 서버 가상화.md"
+      - 네트워크 가상화의 원리 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/06 네트워크 가상화의 원리.md"
+      - VLAN : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/07 VLAN.md"
+      - 오버레이 네트워크 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/08 오버레이 네트워크.md"
+      - VPN : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/09 VPN.md"
+      - SDN : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/10 SDN.md"
+      - NFV : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/11 NFV.md"
+      - SD-WAN : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/12 SD-WAN.md"
+      - 클라우드의 네트워크 가상화 : "virtualization-container/Chapter 2 - 가상화의 원리와 기술/13 클라우드의 네트워크 가상화.md"
+    - Chapter 3:
+      - 컨테이너 기술의 역사 : "virtualization-container/Chapter 3 - 컨테이너 기술과 기초 지식/01 컨테이너 기술의 역사.md"
+      - 컨테이너 기술의 장점 : "virtualization-container/Chapter 3 - 컨테이너 기술과 기초 지식/02 컨테이너 기술의 장점.md"
+      - 데브옵스와 컨테이너 기술 : "virtualization-container/Chapter 3 - 컨테이너 기술과 기초 지식/03 데브옵스와 컨테이너 기술.md"
+      - 주요 컨테이너 기술 : "virtualization-container/Chapter 3 - 컨테이너 기술과 기초 지식/04 주요 컨테이너 기술.md"
+      - 마이크로서비스 : "virtualization-container/Chapter 3 - 컨테이너 기술과 기초 지식/05 마이크로서비스.md"
+      - 컨테이너와 서버리스의 비교 : "virtualization-container/Chapter 3 - 컨테이너 기술과 기초 지식/06 컨테이너와 서버리스의 비교.md"
 
 plugins:
   - search:
